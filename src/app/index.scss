@@ -12,6 +12,8 @@
 //    height: 50px;
 //}
 
+$white: #eee; 
+
 body {
     background: url("http://www.fws.gov/eufaula/images/January.JPG") no-repeat;
     width: 100%;
@@ -19,26 +21,63 @@ body {
     height: 100vh;
 }
 
-
-//.blackground-nav {
-//    background-color: rgba(0,0,0,0.5);
-//    
-    .home-navigation {
-      padding: 1em;  
+  
+.home-navigation {
+    background-color: rgba(0,0,0,.3);
+    padding: 1em 0;  
+}
+#navigation-list {
+    padding: 1em 0 0;
+    width: 100%;
+    
+    .nav-wrap {
+        display: inline-block;
+        padding: 5px 0;
+        width: 23.5vw;
+        
+        
+        span {
+            color: $white;
+            font-size: 2em;
+            display: block;
+            text-align: center;
+        }
     }
-    #navigation-list {
-        padding: 0;
-        text-align: center;
-    }
+    
     li {
+        font-size: 1.4em;
         list-style: none;
         display: inline-block;
-        padding: 0 .6em;
-        color: #eee;
+        padding: 0 .2em;
+        color: $white;
     }
-//}
+    .slash {
+        
+    }
+}
 
 
+.slash {
+    color: $white;
+}
+
+//BEGIN MAIN.HTML
+
+h1 {
+    font-size: 3em;
+    font-weight: 200;
+    color: $white;
+    text-align: center;
+    margin-top: 3em;
+}
+
+#title-caption {
+    color: $white;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 200;
+    letter-spacing: .1em;
+}
 
 // injector
 // endinjector
