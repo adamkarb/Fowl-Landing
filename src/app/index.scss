@@ -17,6 +17,7 @@ $desktop: "(min-width: 992px)";
 
 body {
     background: url("http://www.fws.gov/eufaula/images/January.JPG") no-repeat;
+    background-attachment: fixed;
     width: 100%;
     background-size: cover;
     height: 100vh;
@@ -67,19 +68,43 @@ body {
 //BEGIN MAIN.HTML
 
 h1 {
+    font-family: 'Raleway', sans-serif;
     font-size: 3em;
     font-weight: 200;
     color: $white;
     text-align: center;
     margin-top: 3em;
+    
+    @media #{$tablet} {
+        font-size: 5em;
+    }
+    @media #{$desktop} {
+        font-size: 6em;
+    }
 }
 
 #title-caption {
+    font-family: 'Raleway', serif;
     color: $white;
     text-align: center;
     font-size: .9em;
     font-weight: 200;
     letter-spacing: .1em;
+    
+    @media #{$tablet} {
+        font-size: 1em;
+    }
+}
+
+.about {
+    font-family: 'Raleway', sans-serif;
+    color: $white;
+    text-align: center;
+    margin: 2em;
+}
+
+.home-text {
+    color: $white;
 }
 
 // injector
