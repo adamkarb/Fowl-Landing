@@ -7,7 +7,8 @@
 
 
 
-$white: #eee; 
+$white: #eee;
+$hover-color: rgb(230,68,14);
 
 $tablet: "(min-width: 768px) and (max-width: 992px)";
 $desktop: "(min-width: 992px)";
@@ -23,7 +24,10 @@ body {
     height: 100vh;
 }
 
-  
+a:hover, a:focus {
+    text-decoration: none;
+}  
+
 .home-navigation {
     background-color: rgba(0,0,0,.3);
     padding: 1em 0;  
@@ -44,14 +48,22 @@ body {
             font-size: 2em;
             display: block;
             text-align: center;
+            &:hover {
+                color: $hover-color;    
+            }
         }
         
         li {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
             font-size: 1.4em;
             list-style: none;
             display: inline-block;
             padding: 0 .2em;
             color: $white;
+            &:hover {
+                color: $hover-color;
+            }
             
         }
         
@@ -79,7 +91,7 @@ h1 {
         font-size: 5em;
     }
     @media #{$desktop} {
-        font-size: 6em;
+        font-size: 7em;
     }
 }
 
@@ -93,6 +105,9 @@ h1 {
     
     @media #{$tablet} {
         font-size: 1em;
+    }
+    @media #{$desktop} {
+        font-size: 1.5em;
     }
 }
 
