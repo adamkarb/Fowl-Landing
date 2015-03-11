@@ -122,5 +122,13 @@ h1 {
     color: $white;
 }
 
+// BEGIN WEATHER.HTML
+
+.weather-box {
+    background-color: rgba(0,0,0,.6);    
+    border-radius: 2em;
+    color: $white;
+}
+
 // injector
 // endinjector
