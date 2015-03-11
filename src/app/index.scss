@@ -5,12 +5,122 @@
   padding: 0.2em 0;
 }
 
-.thumbnail {
-  height: 200px;
 
-  img.pull-right {
-    width: 50px;
-  }
+
+$white: #eee;
+$hover-color: rgb(230,68,14);
+
+$tablet: "(min-width: 768px) and (max-width: 992px)";
+$desktop: "(min-width: 992px)";
+
+
+    
+
+body {
+    background: url("http://www.fws.gov/eufaula/images/January.JPG") no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
 }
+
+a:hover, a:focus {
+    text-decoration: none;
+}  
+
+.home-navigation {
+    background-color: rgba(0,0,0,.3);
+    padding: 1em 0;  
+}
+#navigation-list {
+    padding: 1em 0 0;
+    width: 100%;
+    
+    .nav-wrap {
+        display: inline-block;
+        padding: 5px 0;
+        width: 23.5vw;
+        text-align: center;
+        
+        
+        span {
+            color: $white;
+            font-size: 2em;
+            display: block;
+            text-align: center;
+            &:hover {
+                color: $hover-color;    
+            }
+        }
+        
+        li {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+            font-size: 1.4em;
+            list-style: none;
+            display: inline-block;
+            padding: 0 .2em;
+            color: $white;
+            &:hover {
+                color: $hover-color;
+            }
+            
+        }
+        
+    }
+    
+    
+}
+
+
+.slash {
+    color: $white;
+}
+
+//BEGIN MAIN.HTML
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    font-weight: 200;
+    color: $white;
+    text-align: center;
+    margin-top: 3em;
+    
+    @media #{$tablet} {
+        font-size: 5em;
+    }
+    @media #{$desktop} {
+        font-size: 7em;
+    }
+}
+
+#title-caption {
+    font-family: 'Raleway', serif;
+    color: $white;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 200;
+    letter-spacing: .1em;
+    
+    @media #{$tablet} {
+        font-size: 1em;
+    }
+    @media #{$desktop} {
+        font-size: 1.5em;
+    }
+}
+
+.about {
+    font-family: 'Raleway', sans-serif;
+    color: $white;
+    text-align: center;
+    margin: 2em;
+}
+
+.home-text {
+    color: $white;
+}
+
 // injector
 // endinjector

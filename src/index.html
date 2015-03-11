@@ -2,13 +2,14 @@
 <html class="no-js" ng-app="waterfowlGulpAngular">
   <head>
     <meta charset="utf-8">
-    <title>waterfowlGulpAngular</title>
+    <title>World of Waterfowl</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
     <link rel="stylesheet" href="app/vendor.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,300|Merriweather:400,300' rel='stylesheet' type='text/css'>
     <!-- bower:css -->
     <!-- run `gulp wiredep` to automaticaly populate bower styles dependencies -->
     <!-- endbower -->
@@ -25,8 +26,56 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ui-view></div>
 
+    
+        <nav class="home-navigation">
+            <ul id="navigation-list">
+                <div class="nav-wrap">
+                   <a href="#/">
+                        <span class="glyphicon glyphicon-home visible-xs"></span>
+                        <li class="hidden-xs">Home</li>
+                    </a>
+                </div>
+                <div class="nav-wrap">   
+                    <a href="#/weather">
+                        <span class="glyphicon glyphicon-cloud visible-xs"></span>
+                        <li class="hidden-xs">Weather</li>
+                    </a>
+                </div>
+                <div class="nav-wrap">
+                   <a href="#">   
+                        <span class="glyphicon glyphicon-globe visible-xs"></span>
+                        <li class="hidden-xs">Map</li>
+                    </a>    
+                </div>
+                <div class="nav-wrap">       
+                    <a href="#">
+                        <span class="glyphicon glyphicon-camera visible-xs"></span>
+                        <li class="hidden-xs">Duck ID</li>
+                    </a>
+                </div>    
+            </ul>
+        </nav>
+       
+    
+    
+            
+    <div ui-view></div>
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('waterfowlGulpAngular')
-  .controller('MainCtrl', function () {
+
+.controller('weatherCtrl', function() {
     
-  });
+})
