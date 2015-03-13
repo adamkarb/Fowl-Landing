@@ -20,3 +20,6 @@ angular.module('waterfowlGulpAngular', ['ngAnimate', 'restangular', 'ui.router']
     $urlRouterProvider.otherwise('/');
   })
 ;
+
+
+
