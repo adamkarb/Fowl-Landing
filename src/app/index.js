@@ -14,9 +14,18 @@ angular.module('waterfowlGulpAngular', ['ngAnimate', 'restangular', 'ui.router']
         templateUrl: 'app/weather/weather.html',
         controller: 'weatherCtrl',
         controllerAs: 'weather'
+    })
+      .state('geo', {
+        url: '/geo',
+        templateUrl: 'app/maps/map.html',
+        controller: 'mapCtrl',
+        controllerAs: 'map'
     });
 
           
     $urlRouterProvider.otherwise('/');
   })
 ;
+
+
+

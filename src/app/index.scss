@@ -8,7 +8,7 @@
 
 
 $white: #eee;
-$hover-color: rgb(230,68,14);
+$hover-color: cornflowerblue;
 
 $tablet: "(min-width: 768px) and (max-width: 992px)";
 $desktop: "(min-width: 992px)";
@@ -17,7 +17,7 @@ $desktop: "(min-width: 992px)";
     
 
 body {
-    background: url("http://www.fws.gov/eufaula/images/January.JPG") no-repeat;
+    background: url("../assets/images/Ducks-Nicaragua-Perfect.jpg") no-repeat;
     background-attachment: fixed;
     width: 100%;
     background-size: cover;
@@ -86,12 +86,14 @@ h1 {
     color: $white;
     text-align: center;
     margin-top: 3em;
+   // text-shadow: -3px 3px 5px black;
     
     @media #{$tablet} {
         font-size: 5em;
     }
     @media #{$desktop} {
         font-size: 7em;
+        margin-top: 25vh;
     }
 }
 
@@ -121,6 +123,16 @@ h1 {
 .home-text {
     color: $white;
 }
+
+// BEGIN WEATHER.HTML
+
+//.weather-box {
+//    background-color: rgba(101,156,239,.6);    
+//    border-radius: 2em;
+//    color: $white;
+//    height: 40em;
+//    margin-top: 4em;
+//}
 
 // injector
 // endinjector
