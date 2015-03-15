@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('waterfowlGulpAngular', ['ngAnimate', 'restangular', 'ui.router'])
+angular.module('waterfowlGulpAngular', ['ngAnimate', 'restangular', 'ui.router', 'angular-skycons'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {

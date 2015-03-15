@@ -1,19 +1,21 @@
 <div class="container-fluid">
     
-    <section class="weather-box col-md-offset-1 col-md-2">
-    </section>
+    <h2 class='local-forecast'>Your local forecast</h2>
+    <p class="forecast-summary">{{weather.summary}}</p>
     
-    <section class="weather-box col-md-2">
+       
+    <section ng-repeat="day in weather.daily" class="weather-box col-md-4">
+        <div class="weather-content">
+            
+            <p class="dayOfWeek">{{day.time *1000 | date:'EEEE'}}</p>
+            <p class="date">{{day.time *1000 | date:'M/d'}}</p>
+            <skycon icon='weather.iconObj.icon' color='weather.iconObj.color'></skycon>
+            <p class="day-summary">{{day.summary}}</p>
+            <p class="day-rain">Chance of Precip: {{day.precipProbability * 100}}%</p>
+            <p class="day-sunrise">Sunrise: {{day.sunriseTime *1000 | date:'h:mm'}}AM</p>
+            <p class="day-sunset">Sunset: {{day.sunsetTime *1000 | date:'h:mm'}}PM</p>
+            <p class="day-wind">Wind speed: {{day.windSpeed | number:0}}mph</p>
+        </div>
     </section>
-    
-    <section class="weather-box col-md-2">
-    </section>
-    
-    <section class="weather-box col-md-2">
-    </section>
-    
-    <section class="weather-box col-md-2">
-    </section>
-    
     
 </div>
