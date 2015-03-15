@@ -10,17 +10,16 @@ angular.module('waterfowlGulpAngular')
         self.summary = data.data.daily.summary;
         self.daily = data.data.daily.data;
         
-        self.iconObj = {
-            icon: 'rain',
-            color: '#eee'
-        }
         
         console.log('list of daily conditions: ', self.daily);
-//        console.log('Weekly overview: ', self.summary)
-//        console.log(data);
+
     });
     
-   
+    //defines attributes of skycons
+   this.iconObj = {
+       color: '#eee',
+       iconSize: 200
+   }
     
     
 }) //END CONTROLLER
@@ -30,11 +29,8 @@ angular.module('waterfowlGulpAngular')
        console.log('Factory is working')
    })
 
-})
+}); //END FACTORY
 
 
-; //END FACTORY
 
-
-// APIKEY forecast.io  `only written as numbers`= 122e62eac5a1a3d44186abef5e1cabd3
 
