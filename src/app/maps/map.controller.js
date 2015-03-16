@@ -23,7 +23,16 @@ angular.module('waterfowlGulpAngular')
     };
     
     $scope.markers = [
-        
+        {
+          id: 1,  
+          latitude: "28.4158",
+          longitude: "-81.2989" 
+        },
+        {
+            id: 2,
+            latitude: "29",
+            longitude: "-84"
+        }
     ];
     
 

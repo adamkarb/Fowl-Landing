@@ -193,15 +193,16 @@ h1 {
 //MAP.HTML
 
 .angular-google-map-container {
-    padding-bottom: 40%;
-    width: 90%;
+    
+    height: 80vh;
+    width: 100%;
     opacity: .9;
     margin: 0 auto;
 }
 
 .map-head {
     margin-top: 2em;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     text-align: center;
    
     .map-welcome {

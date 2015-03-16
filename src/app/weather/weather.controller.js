@@ -10,7 +10,7 @@ angular.module('waterfowlGulpAngular')
         self.summary = data.data.daily.summary;
         self.daily = data.data.daily.data;
         
-        
+        console.log(data);
         console.log('list of daily conditions: ', self.daily);
 
     });
