@@ -18,7 +18,7 @@ angular.module('waterfowlGulpAngular')
     //defines attributes of skycons
    this.iconObj = {
        color: '#eee',
-       iconSize: 200
+       iconSize: 180
    }
     
     

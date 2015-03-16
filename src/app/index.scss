@@ -143,9 +143,8 @@ h1 {
 
 .weather-box {
     background-color: rgba(0,0,0,.5);    
-    border-radius: 2em;
-    color: $white;
-    height: 40em;
+    border-radius: 1em;
+    height: 39em;
     box-shadow: -3px 3px 15px #222;
     font-size: 1.1em;
     
@@ -182,7 +181,11 @@ h1 {
         
         span {
             font-size: 2em;
-            
+            text-align: right;
+        }
+        
+        .span-wrap {
+            text-align: right;
         }
     }
 }
