@@ -1,15 +1,30 @@
 'use strict';
 
 angular.module('waterfowlGulpAngular')
-//    .config(['uiGmapGoogleMapApiProvider', function(GoogleMapApiProviders){
-//        GoogleMapApiProviders.configure({
-//            key: 'AIzaSyBM2_k6sZazd3dSVqSmJCSvmyx3Wk66sdM',
-//            v: '3.17',
-//            libraries: 'weather,geometry,visualization'
-//        })
-//    }])
+    
   .controller('mapCtrl', function () {
     console.log('map controller works');
     
     
-  });
+  })
+
+  
+    
+    
+.controller('gMap', function ($scope) {
+    console.log('gMap controller works');
+    
+    $scope.map = {
+        center: {
+            latitude: 38.2, 
+            longitude: -98.5795
+        },
+        zoom: 5
+    };
+    
+    $scope.markers = [
+        
+    ];
+    
+
+});
