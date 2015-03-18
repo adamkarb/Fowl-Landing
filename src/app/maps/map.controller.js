@@ -31,7 +31,7 @@ angular.module('waterfowlGulpAngular')
                     return alert("Please fill out a form before placing a marker");
                 }
             $scope.$apply(function() {
-                console.log($scope.markers)
+                //console.log($scope.markers)
                 //console.log(handlerArgs)
                 
                 $scope.markers.push({

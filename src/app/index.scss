@@ -144,7 +144,7 @@ h1 {
 .weather-box {
     background-color: rgba(0,0,0,.5);    
     border-radius: 1em;
-    height: 39em;
+    height: 46em;
     box-shadow: -3px 3px 15px #222;
     font-size: 1.1em;
     
@@ -175,18 +175,13 @@ h1 {
             font-weight: 300;
         }
         
-        .day-rain {
-            
-        }
+        
         
         span {
             font-size: 2em;
             text-align: right;
         }
         
-        .span-wrap {
-            text-align: right;
-        }
     }
 }
 
@@ -221,7 +216,7 @@ h1 {
 }
 
 .report {
-    //margin-top: 2em;
+    
     
     .label-text {
         font-family: 'Merriweather', sans-serif;
