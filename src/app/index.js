@@ -24,8 +24,7 @@ angular.module('waterfowlGulpAngular', ['ngAnimate', 'restangular', 'ui.router',
       .state('geo', {
         url: '/geo',
         templateUrl: 'app/maps/map.html',
-        controller: 'mapCtrl',
-        controllerAs: 'map'
+        controller: 'gMap'
     });
       
 

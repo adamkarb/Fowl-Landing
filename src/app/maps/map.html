@@ -4,7 +4,7 @@
     <p class="map-explain">Use this as a place to report the migration and give a brief summary of your hunt</p>
 </header>
  
-<div ng-controller="gMap" class="map-container">
+<div class="map-container">
     <ui-gmap-google-map center='map.center' zoom='map.zoom' events="events">
         <ui-gmap-markers models="markers" options="'options'" coords="'self'" icon="'icon'">
             <ui-gmap-windows show="show">
@@ -17,9 +17,10 @@
 <form id="report-form">
     <div class="form-group report">
         <label class="label-text" for="hunt-report">Add a report, then place a marker!</label>
-        <textarea id="hunt-report" class="form-control" rows="3" placeholder="Share a little about the hunt..."></textarea>
+        <textarea ng-model="userInput.report" id="hunt-report" class="form-control" rows="3" placeholder="Share a little about the hunt..." required></textarea>
     </div>
 </form>
+
 
 
 

@@ -2,11 +2,6 @@
 
 angular.module('waterfowlGulpAngular')
     
-  .controller('mapCtrl', function () {
-    console.log('map controller works');
-    
-    
-  })
 
   
     
@@ -22,9 +17,11 @@ angular.module('waterfowlGulpAngular')
         zoom: 5
     };
     
+    $scope.userInput = {
+        
+    };
     
     $scope.markers = [];
-    
     
     
     $scope.events = {
@@ -37,7 +34,7 @@ angular.module('waterfowlGulpAngular')
                     latitude: handlerArgs[0].latLng.lat(),
                     longitude: handlerArgs[0].latLng.lng(),
                     showWindow: true,
-                    title: "@Al_the_x",
+                    title: $scope.userInput.report,
                     options: {
                         animation: api.Animation.DROP,
                         title: handlerArgs[0].latLng.toUrlValue()
@@ -54,23 +51,7 @@ angular.module('waterfowlGulpAngular')
     });
     
     
-//    $scope.markers = [
-//        {
-//            id: 1,  
-//            latitude: "28.4158",
-//            longitude: "-81.2989",
-//            options: {
-//                labelContent: "SwaytheDev",
-//                draggable: true,
-//                crossOnDrag: false
-//            }
-//        },
-//        {
-//            id: 2,
-//            latitude: "29",
-//            longitude: "-84"
-//        }
-//    ];
+
     
 
 });
