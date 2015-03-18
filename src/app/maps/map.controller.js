@@ -17,30 +17,36 @@ angular.module('waterfowlGulpAngular')
         zoom: 5
     };
     
-    $scope.userInput = {
-        
-    };
+   
+    
+    $scope.userInput = '';
     
     $scope.markers = [];
     
     
     $scope.events = {
         click: function (map, eventName, handlerArgs) {
+            if ($scope.userInput == '' || $scope.userInput == undefined) {
+                    console.log($scope.userInput)
+                    return alert("Please fill out a form before placing a marker");
+                }
             $scope.$apply(function () {
                 console.log($scope.markers)
                 //console.log(handlerArgs)
+                
                 $scope.markers.push({
                     id: $scope.markers.length,
                     latitude: handlerArgs[0].latLng.lat(),
                     longitude: handlerArgs[0].latLng.lng(),
                     showWindow: true,
-                    title: $scope.userInput.report,
+                    title: $scope.userInput,
                     options: {
                         animation: api.Animation.DROP,
                         title: handlerArgs[0].latLng.toUrlValue()
               
                     }
                 });
+               return $scope.userInput = '';
             });
         }
     };
