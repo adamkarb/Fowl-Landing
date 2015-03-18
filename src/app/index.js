@@ -1,7 +1,13 @@
 'use strict';
 
-angular.module('waterfowlGulpAngular', ['ngAnimate', 'restangular', 'ui.router'])
-  .config(function ($stateProvider, $urlRouterProvider) {
+angular.module('waterfowlGulpAngular', ['ngAnimate', 'restangular', 'ui.router', 'angular-skycons', 'uiGmapgoogle-maps'])
+  .config(function ($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+            key: 'AIzaSyBM2_k6sZazd3dSVqSmJCSvmyx3Wk66sdM',
+            v: '3.17',
+            libraries: 'weather,geometry,visualization'
+        });
+    
     $stateProvider
       .state('home', {
         url: '/',
@@ -18,9 +24,9 @@ angular.module('waterfowlGulpAngular', ['ngAnimate', 'restangular', 'ui.router']
       .state('geo', {
         url: '/geo',
         templateUrl: 'app/maps/map.html',
-        controller: 'mapCtrl',
-        controllerAs: 'map'
+        controller: 'gMap'
     });
+      
 
           
     $urlRouterProvider.otherwise('/');
