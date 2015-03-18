@@ -6,9 +6,20 @@
  
 <div ng-controller="gMap" class="map-container">
     <ui-gmap-google-map center='map.center' zoom='map.zoom' events="events">
-        <ui-gmap-markers models="markers" options="'options'" coords="'self'" icon="'icon'">           </ui-gmap-markers>    
+        <ui-gmap-markers models="markers" options="'options'" coords="'self'" icon="'icon'">
+            <ui-gmap-windows show="show">
+                <p ng-non-bindable>{{title}}</p>
+            </ui-gmap-windows> 
+        </ui-gmap-markers>    
     </ui-gmap-google-map>
 </div>
+
+<form id="report-form">
+    <div class="form-group report">
+        <label class="label-text" for="hunt-report">Add a report, then place a marker!</label>
+        <textarea id="hunt-report" class="form-control" rows="3" placeholder="Share a little about the hunt..."></textarea>
+    </div>
+</form>
 
 
 

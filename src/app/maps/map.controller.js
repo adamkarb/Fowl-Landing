@@ -25,6 +25,8 @@ angular.module('waterfowlGulpAngular')
     
     $scope.markers = [];
     
+    
+    
     $scope.events = {
         click: function (map, eventName, handlerArgs) {
             $scope.$apply(function () {
@@ -34,6 +36,8 @@ angular.module('waterfowlGulpAngular')
                     id: $scope.markers.length,
                     latitude: handlerArgs[0].latLng.lat(),
                     longitude: handlerArgs[0].latLng.lng(),
+                    showWindow: true,
+                    title: "@Al_the_x",
                     options: {
                         animation: api.Animation.DROP,
                         title: handlerArgs[0].latLng.toUrlValue()
