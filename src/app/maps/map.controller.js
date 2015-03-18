@@ -14,7 +14,7 @@ angular.module('waterfowlGulpAngular')
             latitude: 38.2, 
             longitude: -98.5795
         },
-        zoom: 5
+        zoom: 4
     };
     
    
@@ -30,7 +30,7 @@ angular.module('waterfowlGulpAngular')
                     console.log($scope.userInput)
                     return alert("Please fill out a form before placing a marker");
                 }
-            $scope.$apply(function () {
+            $scope.$apply(function() {
                 console.log($scope.markers)
                 //console.log(handlerArgs)
                 
