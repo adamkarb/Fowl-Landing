@@ -25,6 +25,12 @@ angular.module('waterfowlGulpAngular', ['ngAnimate', 'restangular', 'ui.router',
         url: '/geo',
         templateUrl: 'app/maps/map.html',
         controller: 'gMap'
+    })
+      .state('duck', {
+        url: '/duck',
+        templateUrl: 'app/duck/duck.html',
+        controller: 'DuckCtrl',
+        controllerAs: 'duck'
     });
       
 
