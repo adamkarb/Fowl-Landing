@@ -3,7 +3,7 @@
 angular.module('waterfowlGulpAngular')
 
 
-.controller('weatherCtrl', function($http, weatherFactory, geolocation) {
+.controller('weatherCtrl', function($http, weatherFactory, geolocation, cfpLoadingBar) {
     var self = this;
     
     
@@ -27,7 +27,7 @@ angular.module('waterfowlGulpAngular')
     
 }) //END CONTROLLER
 
-.factory('weatherFactory', function($http, geolocation){
+.factory('weatherFactory', function($http, geolocation, cfpLoadingBar){
     var self = this;
      
     return geolocation.getLocation().then(function(data){
@@ -40,15 +40,12 @@ angular.module('waterfowlGulpAngular')
         console.log('lon = ', self.coords.lon);
             return $http.jsonp('https://api.forecast.io/forecast/122e62eac5a1a3d44186abef5e1cabd3/'+self.coords.lat+','+self.coords.lon+'?callback=JSON_CALLBACK').success(function(data){
            console.log('Factory is working')
-         })
+         });
         
-     })
+     });
         
         
    
-    
-   
-
 }); //END FACTORY
 
 

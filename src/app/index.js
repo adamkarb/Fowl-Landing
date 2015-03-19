@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('waterfowlGulpAngular', ['ngAnimate', 'restangular', 'ui.router', 'angular-skycons', 'uiGmapgoogle-maps', 'geolocation'])
+angular.module('waterfowlGulpAngular', ['ngAnimate', 'restangular', 'ui.router', 'angular-skycons', 'uiGmapgoogle-maps', 'geolocation', 'angular-loading-bar'])
   .config(function ($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider) {
     uiGmapGoogleMapApiProvider.configure({
             key: 'AIzaSyBM2_k6sZazd3dSVqSmJCSvmyx3Wk66sdM',

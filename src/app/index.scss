@@ -10,8 +10,10 @@
 $white: #eee;
 $hover-color: cornflowerblue;
 
+$mobile: "(max-width: 768px)";
 $tablet: "(min-width: 768px) and (max-width: 992px)";
 $desktop: "(min-width: 992px)";
+
 
 
     
@@ -144,9 +146,14 @@ h1 {
 .weather-box {
     background-color: rgba(0,0,0,.5);    
     border-radius: 1em;
-    height: 48em;
+    height: 67em;
     box-shadow: -3px 3px 15px #222;
     font-size: 1.1em;
+    margin-bottom: 1ex;
+    
+    @media #{$mobile} {
+        height: 43.4em; //43.4
+    }
     
     .weather-content {
         color: $white;
@@ -173,15 +180,40 @@ h1 {
             text-align: center;
             font-size: 1.5em;
             font-weight: 300;
+            
+            @media #{$mobile} {
+                font-size: 1em;
+            }
         }
         
-        
-        
-        span {
-            font-size: 2em;
-            text-align: right;
+       
+            
+        .weather-attribute {
+            margin-top: 2em;
+            font-size: 1.5em;
+            text-align: center;
+            
+            @media #{$mobile} {
+                font-size: 1em;
+                text-align: left;
+                margin-top: 2ex;
+            }
+            
         }
-        
+
+        .weather-stat {
+            margin-top: .66em;
+            font-size: 3em;
+            text-align: center;
+            
+            @media #{$mobile} {
+                font-size: 1em;
+                text-align: right;
+                margin-top: 2ex;
+            }
+            
+        }
+
     }
 }
 
@@ -205,6 +237,10 @@ h1 {
         font-size: 4em;
         font-family: 'Raleway';
         text-shadow: -2px 2px 5px gray;
+        
+        @media #{$mobile} {
+            font-size: 2.5em;
+        }
     }
 
     .map-explain {
@@ -212,6 +248,10 @@ h1 {
         font-size: 1.1em;
         font-family: 'Merriweather';
         text-shadow: -2px 2px 5px gray;
+        
+        @media #{$mobile} {
+            font-size: 1em;
+        }
     }
 }
 
@@ -223,6 +263,11 @@ h1 {
         font-size: 2em;
         color: $white;
         text-shadow: -1px 1px 12px black;
+        
+        @media #{$mobile} {
+            font-size: 1.3em;
+            margin-top: .5ex;
+        }
     }
     
     textarea {
