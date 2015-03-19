@@ -29,7 +29,8 @@ angular.module('waterfowlGulpAngular')
 
 .factory('weatherFactory', function($http, geolocation){
     var self = this;
-    geolocation.getLocation().then(function(data){
+     
+    return geolocation.getLocation().then(function(data){
         //console.log(data)
         self.coords = {
             lat: data.coords.latitude,
@@ -37,12 +38,13 @@ angular.module('waterfowlGulpAngular')
         };
         console.log('lat = ', self.coords.lat);
         console.log('lon = ', self.coords.lon);
-        
-     })
-        
-        return $http.jsonp('https://api.forecast.io/forecast/122e62eac5a1a3d44186abef5e1cabd3/32.4158,-84.2989?callback=JSON_CALLBACK').success(function(data){
+        return $http.jsonp('https://api.forecast.io/forecast/122e62eac5a1a3d44186abef5e1cabd3/'+self.coords.lat+','+self.coords.lon+'?callback=JSON_CALLBACK').success(function(data){
        console.log('Factory is working')
      })
+        
+     })
+        
+        
    
     
    
