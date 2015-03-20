@@ -1,3 +1,10 @@
-<div class="duckrepeat" ng-repeat="duck in duck.list">
-    <p>{{duck.duck.list}}</p>
+<div class="duckrepeat container-fluid" ng-repeat="duck in duck.list">
+    <div class="duck-pic-wrap col-sm-6">
+        <img ng-src='{{duck.image}}'/>
+    </div>
+    
+    <section class="duck-info col-sm-6">
+        <h2 class="duck-name">{{duck.name}}</h2>
+        <p class="duck-scription">{{duck.description}}</p>
+    </section>
 </div>
