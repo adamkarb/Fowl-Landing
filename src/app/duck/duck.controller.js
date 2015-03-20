@@ -1,4 +1,4 @@
-angular.module('waterfowlGulpAngular', [])
+angular.module('waterfowlGulpAngular')
 
 .controller('DuckCtrl', function(){
     
