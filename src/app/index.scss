@@ -14,7 +14,13 @@ $mobile: "(max-width: 768px)";
 $tablet: "(min-width: 768px) and (max-width: 992px)";
 $desktop: "(min-width: 992px)";
 
-
+[ui-view].ng-enter  {
+  -webkit-animation: enter_sequence .5s linear; /* Safari/Chrome */
+}
+@-webkit-keyframes enter_sequence {
+  from { opacity:0; }
+  to { opacity:1; }
+}
 
     
 
