@@ -74,14 +74,14 @@ angular.module('waterfowlGulpAngular')
             description: "Male canvasbacks have a chestnut-red head and neck, a black breast, grayish back, black rump and blackish-brown tail. The sides, flank and belly are white, while the wing coverts are grayish and vermiculated with black. The bill is blackish and the legs and feet are bluish-gray. The iris is bright red in the spring, but duller in the winter. Female canvasbacks have a light brown head and neck, grading into a darker brown chest and foreback. The sides, flanks and back are grayish-brown. The bill is blackish and the legs and feet are bluish-gray."
         },
         {
-            image: "",
-            name: "",
-            description: ""
+            image: "http://sb.site-builder.ws/files/users/5/5A650BFC55267EF7E040A8C0AC003809/IMG_8820web.JPG",
+            name: "Bufflehead",
+            description: "Male buffleheads have a large white patch across the back of the head that extends from cheek to cheek, forming a bushy crest. The remainder of the head is blackish with an iridescent green and purple sheen. The neck, scapulars, breast, belly and sides are white, and the back and rump are black. The upper wing surface is blackish except for the white speculum extending from the inner and middle secondaries across to the outer lesser and marginal coverts. The bill is light blue-gray and the legs and feet are fleshy pink. Female buffleheads have a brownish head and neck, except for an oval white patch that extends from below the eye back towards the nape of the neck. The breast, sides and flanks are dark gray, the back is blackish, the belly is whitish and the tail is grayish-brown. The upper wing surface is blackish-brown, except for the inner and middle secondaries and inner greater coverts, which are white, tipped with black. The bill is dark gray and the legs and feet are grayish."
         },
         {
-            image: "",
-            name: "",
-            description: ""
+            image: "http://www.animalphotos.me/bird3/bird3-scaup_files/scaup_less.jpg",
+            name: "Lesser Scaup",
+            description: "Lesser and greater scaup are often found together. The smaller size of the lesser scaup is very obvious. Lesser scaup also have a smaller, less-round, purple-tinted head than greater scaup. Male lesser scaup have a glossy black head with a purple cast. The neck, breast and upper mantle are glossy black. Vermiculations on the sides and flanks are olive brown and contrast with the white chest and belly. The back is light gray with broad heavy vermiculations of sooty black. The tail, upper and under-tail coverts are black. The wing has a white speculum and the inner primaries are light brown, becoming darker towards the tips and outer primaries. The bill is a light blue-gray with a black nail, the legs and feet are gray and the iris is yellow. In courtship the male utters weak whistling notes. Female lesser scaup have a brownish head, neck and chest, and white oval patches around their bills. The back, rump and scapulars are dark brown and the speculum is white. The bill is similar to that of the male but slightly duller, the legs and feet are gray and the iris is yellow. The female has weaker growl than greater scaup."
         }
     ]
     
