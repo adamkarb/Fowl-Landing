@@ -7,7 +7,7 @@
     <div class="map-container">
         <ui-gmap-google-map center='map.center' zoom='map.zoom' events="events">
             <ui-gmap-markers models="markers" options="'options'" coords="'self'" icon="'icon'">
-                <ui-gmap-windows show="show">
+                <ui-gmap-windows show="show" options="'options'">
                     <p ng-non-bindable>{{title}}</p>
                 </ui-gmap-windows> 
             </ui-gmap-markers>    

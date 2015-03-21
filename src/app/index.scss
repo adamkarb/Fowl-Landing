@@ -297,6 +297,27 @@ h1 {
         }
     
     }
+    
+    .duck-info {
+        color: $white;
+        
+        .duck-name {
+            margin-top: 0;
+            margin-bottom: .5ex;
+            padding: 0;
+            font-size: 4em;
+            font-family: 'Raleway';
+            text-shadow: -2px 2px 5px gray;
+        }
+        
+        .duck-scription {
+            font-size: 1.1em;
+            font-family: 'Merriweather';
+            line-height: 3ex;
+            text-shadow: -2px 2px 5px gray;
+            
+        }
+    }
 }
 
 
