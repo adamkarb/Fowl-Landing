@@ -42,8 +42,8 @@ angular.module('waterfowlGulpAngular')
                     title: $scope.userInput,
                     options: {
                         animation: api.Animation.DROP,
-                        title: handlerArgs[0].latLng.toUrlValue()
-              
+                        title: handlerArgs[0].latLng.toUrlValue(),
+                        disableAutoPan: true
                     }
                 });
                return $scope.userInput = '';
