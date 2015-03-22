@@ -6,7 +6,7 @@ angular.module('waterfowlGulpAngular')
   
     
 //This library requires scope. Get with the times
-.controller('gMap', function ($scope, uiGmapGoogleMapApi) {
+.controller('gMap', function ($scope, uiGmapGoogleMapApi, $firebaseArray, $firebaseObject) {
     console.log('gMap controller works');
     
     $scope.map = {
@@ -17,11 +17,11 @@ angular.module('waterfowlGulpAngular')
         zoom: 4
     };
     
-   
+    var mapPins = new Firebase('https://fowl-landing.firebaseio.com/pins');
     
     $scope.userInput = '';
     
-    $scope.markers = [];
+    $scope.markers = $firebaseArray(mapPins);
     
     
     $scope.events = {
@@ -34,7 +34,7 @@ angular.module('waterfowlGulpAngular')
                 //console.log($scope.markers)
                 //console.log(handlerArgs)
                 
-                $scope.markers.push({
+                $scope.markers.$add({
                     id: $scope.markers.length,
                     latitude: handlerArgs[0].latLng.lat(),
                     longitude: handlerArgs[0].latLng.lng(),
