@@ -6,7 +6,7 @@ angular.module('waterfowlGulpAngular')
   
     
 //This library requires scope. Get with the times
-.controller('gMap', function ($scope, uiGmapGoogleMapApi) {
+.controller('gMap', function ($scope, uiGmapGoogleMapApi, $firebaseArray, $firebaseObject) {
     console.log('gMap controller works');
     
     $scope.map = {
