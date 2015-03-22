@@ -17,7 +17,7 @@ angular.module('waterfowlGulpAngular')
         zoom: 4
     };
     
-   
+    var mapPins = new Firebase('https://fowl-landing.firebaseio.com/pins');
     
     $scope.userInput = '';
     
