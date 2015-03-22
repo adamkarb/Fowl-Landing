@@ -21,7 +21,7 @@ angular.module('waterfowlGulpAngular')
     
     $scope.userInput = '';
     
-    $scope.markers = [];
+    $scope.markers = $firebaseArray(mapPins);
     
     
     $scope.events = {
@@ -34,7 +34,7 @@ angular.module('waterfowlGulpAngular')
                 //console.log($scope.markers)
                 //console.log(handlerArgs)
                 
-                $scope.markers.push({
+                $scope.markers.$add({
                     id: $scope.markers.length,
                     latitude: handlerArgs[0].latLng.lat(),
                     longitude: handlerArgs[0].latLng.lng(),
