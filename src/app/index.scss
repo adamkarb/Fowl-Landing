@@ -5,12 +5,327 @@
   padding: 0.2em 0;
 }
 
-.thumbnail {
-  height: 200px;
 
-  img.pull-right {
-    width: 50px;
-  }
+
+$white: #eee;
+$hover-color: cornflowerblue;
+
+$mobile: "(max-width: 768px)";
+$tablet: "(min-width: 768px) and (max-width: 992px)";
+$desktop: "(min-width: 992px)";
+
+[ui-view].ng-enter  {
+  -webkit-animation: enter_sequence .5s linear; /* Safari/Chrome */
 }
+@-webkit-keyframes enter_sequence {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+    
+
+body {
+    background: url("../assets/images/Ducks-Nicaragua-Perfect.jpg") no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}  
+
+.home-navigation {
+    background-color: rgba(0,0,0,.3);
+    padding: 1em 0;  
+}
+#navigation-list {
+    padding: 1em 0 0;
+    width: 100%;
+    
+    .nav-wrap {
+        display: inline-block;
+        padding: 5px 0;
+        width: 23.5vw;
+        text-align: center;
+        
+        
+        span {
+            color: $white;
+            font-size: 2em;
+            display: block;
+            text-align: center;
+            &:hover {
+                color: $hover-color;    
+            }
+        }
+        
+        li {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+            font-size: 1.4em;
+            list-style: none;
+            display: inline-block;
+            padding: 0 .2em;
+            color: $white;
+            &:hover {
+                color: $hover-color;
+            }
+            
+        }
+        
+    }
+    
+    
+}
+
+
+.slash {
+    color: $white;
+}
+
+//BEGIN MAIN.HTML
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    font-weight: 200;
+    color: $white;
+    text-align: center;
+    margin-top: 3em;
+   // text-shadow: -3px 3px 5px black;
+    
+    @media #{$tablet} {
+        font-size: 5em;
+    }
+    @media #{$desktop} {
+        font-size: 7em;
+        margin-top: 25vh;
+    }
+}
+
+#title-caption {
+    font-family: 'Raleway', serif;
+    color: $white;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 200;
+    letter-spacing: .1em;
+    
+    @media #{$tablet} {
+        font-size: 1em;
+    }
+    @media #{$desktop} {
+        font-size: 1.5em;
+    }
+}
+
+.about {
+    font-family: 'Raleway', sans-serif;
+    color: $white;
+    text-align: center;
+    margin: 2em;
+}
+
+.home-text {
+    color: $white;
+}
+
+// BEGIN WEATHER.HTML
+
+.local-forecast {
+    color: $white;
+    font-size: 4em;
+    font-family: 'Raleway';
+    text-shadow: -2px 2px 5px gray;
+}
+
+.forecast-summary {
+    color: $white;
+    font-size: 1.1em;
+    font-family: 'Merriweather';
+    text-shadow: -2px 2px 5px gray;
+}
+
+
+.weather-box {
+    background-color: rgba(0,0,0,.5);    
+    border-radius: 1em;
+    height: 67em;
+    box-shadow: -3px 3px 15px #222;
+    font-size: 1.1em;
+    margin-bottom: 1ex;
+    
+    @media #{$mobile} {
+        height: 43.4em; //43.4
+    }
+    
+    .weather-content {
+        color: $white;
+        padding-top: 2em;
+        font-family: 'Merriweather';
+        font-weight: 300;
+        
+        .dayOfWeek {
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 300;
+        }
+        
+        .date {
+            text-align: center;
+            font-size: 1.3em;
+        }
+        
+        .icon-wrap {
+            text-align: center;
+        }
+        
+        .day-summary {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 300;
+            
+            @media #{$mobile} {
+                font-size: 1em;
+            }
+        }
+        
+       
+            
+        .weather-attribute {
+            margin-top: 2em;
+            font-size: 1.5em;
+            text-align: center;
+            
+            @media #{$mobile} {
+                font-size: 1em;
+                text-align: left;
+                margin-top: 2ex;
+            }
+            
+        }
+
+        .weather-stat {
+            margin-top: .66em;
+            font-size: 3em;
+            text-align: center;
+            
+            @media #{$mobile} {
+                font-size: 1em;
+                text-align: right;
+                margin-top: 2ex;
+            }
+            
+        }
+
+    }
+}
+
+//MAP.HTML
+
+.angular-google-map-container {
+    border-radius: 1ex;
+    height: 60vh;
+    width: 100%;
+    opacity: .9;
+    margin: 0 auto;
+}
+
+.map-head {
+    margin-top: -1em;
+    margin-bottom: .5em;
+    text-align: center;
+   
+    .map-welcome {
+        color: $white;
+        font-size: 4em;
+        font-family: 'Raleway';
+        text-shadow: -2px 2px 5px gray;
+        
+        @media #{$mobile} {
+            font-size: 2.5em;
+        }
+    }
+
+    .map-explain {
+        color: $white;
+        font-size: 1.1em;
+        font-family: 'Merriweather';
+        text-shadow: -2px 2px 5px gray;
+        
+        @media #{$mobile} {
+            font-size: 1em;
+        }
+    }
+}
+
+.report {
+    
+    
+    .label-text {
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.2em;
+        color: $white;
+        text-shadow: -1px 1px 7px gray;
+        
+        @media #{$mobile} {
+            font-size: 1.3em;
+            margin-top: .5ex;
+        }
+    }
+    
+    textarea {
+        opacity: .9;
+    }
+
+}
+
+
+// DUCK.HTML
+
+.duckrepeat {
+    margin-top: 4em;
+    
+    .duck-pic-wrap {
+        text-align: center;
+        
+        img {
+            height: 30em;
+            width: 30em;
+        }
+    
+    }
+    
+    .duck-info {
+        color: $white;
+        padding: 1em;
+        background-color: rgba(0,0,0,.5);
+        border-radius: 1em;
+        
+        .duck-name {
+            margin-top: 0;
+            margin-bottom: .5ex;
+            padding: 0;
+            font-size: 4em;
+            font-family: 'Raleway';
+            text-shadow: -1px 1px 15px black;
+        }
+        
+        .duck-scription {
+            font-size: 1.1em;
+            font-family: 'Merriweather';
+            line-height: 3ex;
+//            text-shadow: -2px 2px 5px gray;
+            
+        }
+    }
+}
+
+
+
+
+
 // injector
 // endinjector
