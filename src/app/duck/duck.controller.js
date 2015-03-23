@@ -12,7 +12,7 @@ angular.module('waterfowlGulpAngular')
     
     
     
-    duckArray = [
+    var duckArray = [
         {
             image: "http://upload.wikimedia.org/wikipedia/commons/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg",
             name: "Mallard",
