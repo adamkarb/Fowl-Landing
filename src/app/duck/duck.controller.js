@@ -83,7 +83,7 @@ angular.module('waterfowlGulpAngular')
             name: "Lesser Scaup",
             description: "Lesser and greater scaup are often found together. The smaller size of the lesser scaup is very obvious. Lesser scaup also have a smaller, less-round, purple-tinted head than greater scaup. Male lesser scaup have a glossy black head with a purple cast. The neck, breast and upper mantle are glossy black. Vermiculations on the sides and flanks are olive brown and contrast with the white chest and belly. The back is light gray with broad heavy vermiculations of sooty black. The tail, upper and under-tail coverts are black. The wing has a white speculum and the inner primaries are light brown, becoming darker towards the tips and outer primaries. The bill is a light blue-gray with a black nail, the legs and feet are gray and the iris is yellow. In courtship the male utters weak whistling notes. Female lesser scaup have a brownish head, neck and chest, and white oval patches around their bills. The back, rump and scapulars are dark brown and the speculum is white. The bill is similar to that of the male but slightly duller, the legs and feet are gray and the iris is yellow. The female has weaker growl than greater scaup."
         }
-    ]
+    ];
     
     this.list = duckArray;
 });
