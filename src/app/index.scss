@@ -268,7 +268,7 @@ h1 {
         font-family: 'Raleway', sans-serif;
         font-size: 2.2em;
         color: $white;
-        text-shadow: -1px 1px 7px gray;
+        text-shadow: -1px 1px 10px #333;
         
         @media #{$mobile} {
             font-size: 1.3em;
@@ -284,6 +284,8 @@ h1 {
 
 .window-title {
     overflow: hidden;
+    color: green;
+    font-size: 1.1em;
 }
 
 // DUCK.HTML
