@@ -10,7 +10,7 @@
 $white: #eee;
 $hover-color: cornflowerblue;
 
-$mobile: "(max-width: 767px)";
+$mobile: "(max-width: 768px)";
 $tablet: "(min-width: 768px) and (max-width: 992px)";
 $desktop: "(min-width: 992px)";
 
@@ -282,13 +282,6 @@ h1 {
 
 }
 
-.window-title {
-    color: green;
-//    font-size: 1.2em;
-//    padding-bottom: 2em;
-//    min-height: 5em;
-    overflow: hidden;
-}
 
 // DUCK.HTML
 
