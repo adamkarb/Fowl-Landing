@@ -25,10 +25,10 @@ angular.module('waterfowlGulpAngular')
                 osm: {
                     name: 'OpenStreetMap',
                     type: 'xyz',
-                    url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                    url: '//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                     layerOptions: {
                         subdomains: ['a', 'b', 'c'],
-                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                        attribution: '&copy; <a href="//www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
                         continuousWorld: true
                     }
                 }
