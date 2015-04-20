@@ -6,58 +6,67 @@ angular.module('waterfowlGulpAngular')
   
     
 //This library requires scope. Get with the times
-.controller('gMap', function ($scope, uiGmapGoogleMapApi, $firebaseArray, $firebaseObject) {
+.controller('gMap', function ($scope, leafletData, leafletEvents, $firebaseArray) {
     console.log('gMap controller works');
     
-    $scope.map = {
+    angular.extend($scope, {
+        layers: {
+            baselayers: {
+                googleRoadmap: {
+                    name: 'Google Streets',
+                    layerType: 'ROADMAP',
+                    type: 'google'
+                },
+                googleHybrid: {
+                    name: 'Google Hybrid',
+                    layerType: 'HYBRID',
+                    type: 'google'
+                },
+                osm: {
+                    name: 'OpenStreetMap',
+                    type: 'xyz',
+                    url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                    layerOptions: {
+                        subdomains: ['a', 'b', 'c'],
+                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                        continuousWorld: true
+                    }
+                }
+            }
+
+        }, 
         center: {
-            latitude: 38.2, 
-            longitude: -98.5795
+            lat: 38.2,
+            lng: -98.5795,
+            zoom: 4
         },
-        zoom: 4
-    };
+         events: {
+             markers: {
+                enable: leafletEvents.getAvailableMarkerEvents(),
+            }
+         }
+    });
     
     var mapPins = new Firebase('https://fowl-landing.firebaseio.com/pins');
     
-    $scope.userInput = '';
-    
     $scope.markers = $firebaseArray(mapPins);
     
-    
-    $scope.events = {
-        click: function (map, eventName, handlerArgs) {
-            if ($scope.userInput == '' || $scope.userInput == undefined) {
-                    console.log($scope.userInput)
-                    return alert("Please fill out a form before placing a marker");
-                }
-            $scope.$apply(function() {
-                //console.log($scope.markers)
-                //console.log(handlerArgs)
-                
-                $scope.markers.$add({
-                    id: $scope.markers.length,
-                    latitude: handlerArgs[0].latLng.lat(),
-                    longitude: handlerArgs[0].latLng.lng(),
-                    showWindow: true,
-                    title: $scope.userInput,
-                    options: {
-                        animation: api.Animation.DROP,
-                        title: handlerArgs[0].latLng.toUrlValue(),
-                        disableAutoPan: true
-                    }
-                });
-               return $scope.userInput = '';
-            });
-        }
-    };
-
-    var api;
-    uiGmapGoogleMapApi.then(function(googleMaps) {
-        api = googleMaps;
+    $scope.$on('leafletDirectiveMap.click', function(event, args){
+        
+        if ($scope.huntMessage == '' || $scope.huntMessage == undefined) {
+            return alert("Please fill out a report, then add your marker!");
+        };
+        
+        var leafEvent = args.leafletEvent.latlng;
+        
+        $scope.markers.$add({
+            lat: leafEvent.lat,
+            lng: leafEvent.lng,
+            message: $scope.huntMessage
+        });
+        $scope.huntMessage = '';
     });
-    
-    
+   
 
-    
-
+        
 });

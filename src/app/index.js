@@ -1,12 +1,7 @@
 'use strict';
 
-angular.module('waterfowlGulpAngular', ['ngAnimate', 'ui.router', 'angular-skycons', 'uiGmapgoogle-maps', 'geolocation', 'angular-loading-bar', 'firebase'])
-  .config(function ($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider) {
-    uiGmapGoogleMapApiProvider.configure({
-            key: 'AIzaSyBM2_k6sZazd3dSVqSmJCSvmyx3Wk66sdM',
-            v: '3.17',
-            libraries: 'weather,geometry,visualization'
-        });
+angular.module('waterfowlGulpAngular', ['ngAnimate', 'ui.router', 'angular-skycons', 'leaflet-directive', 'geolocation', 'angular-loading-bar', 'firebase'])
+  .config(function ($stateProvider, $urlRouterProvider) {
     
     $stateProvider
       .state('home', {
