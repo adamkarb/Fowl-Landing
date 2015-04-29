@@ -29,7 +29,7 @@ angular.module('waterfowlGulpAngular')
                     layerOptions: {
                         subdomains: ['a', 'b', 'c'],
                         attribution: '&copy; <a href="//www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-                        continuousWorld: true
+                        continuousWorld: false
                     }
                 }
             }
@@ -50,6 +50,7 @@ angular.module('waterfowlGulpAngular')
     var mapPins = new Firebase('https://fowl-landing.firebaseio.com/pins');
     
     $scope.markers = $firebaseArray(mapPins);
+    
     
     $scope.$on('leafletDirectiveMap.click', function(event, args){
         
