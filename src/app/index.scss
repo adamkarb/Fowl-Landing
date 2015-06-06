@@ -22,7 +22,7 @@ $desktop: "(min-width: 992px)";
   to { opacity:1; }
 }
 
-    
+
 
 body {
     background: url("../assets/images/Ducks-Nicaragua-Perfect.jpg") no-repeat;
@@ -34,33 +34,33 @@ body {
 
 a:hover, a:focus {
     text-decoration: none;
-}  
+}
 
 .home-navigation {
     background-color: rgba(0,0,0,.3);
-    padding: 1em 0;  
+    padding: 1em 0;
 }
 #navigation-list {
     padding: 1em 0 0;
     width: 100%;
-    
+
     .nav-wrap {
         display: inline-block;
         padding: 5px 0;
         width: 24%;
         text-align: center;
-        
-        
+
+
         span {
             color: $white;
             font-size: 2em;
             display: block;
             text-align: center;
             &:hover {
-                color: $hover-color;    
+                color: $hover-color;
             }
         }
-        
+
         li {
             font-family: 'Raleway', sans-serif;
             font-weight: 300;
@@ -72,12 +72,12 @@ a:hover, a:focus {
             &:hover {
                 color: $hover-color;
             }
-            
+
         }
-        
+
     }
-    
-    
+
+
 }
 
 
@@ -95,7 +95,7 @@ h1 {
     text-align: center;
     margin-top: 3em;
    // text-shadow: -3px 3px 5px black;
-    
+
     @media #{$tablet} {
         font-size: 5em;
     }
@@ -112,7 +112,7 @@ h1 {
     font-size: .9em;
     font-weight: 200;
     letter-spacing: .1em;
-    
+
     @media #{$tablet} {
         font-size: 1em;
     }
@@ -130,6 +130,23 @@ h1 {
 
 .home-text {
     color: $white;
+}
+
+.login {
+    cursor: pointer;
+    font-family: 'Raleway';
+    border: 2px solid #3b5998;
+    transition: .5s all ease;
+    color: $white;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+    text-align: center;
+    margin-top: 3em;
+    &:hover {
+        background-color: #3b5998;
+        transition: .5s all ease;
+    }
 }
 
 // BEGIN WEATHER.HTML
@@ -150,74 +167,74 @@ h1 {
 
 
 .weather-box {
-    background-color: rgba(0,0,0,.5);    
+    background-color: rgba(0,0,0,.5);
     border-radius: 1em;
     height: 67em;
     box-shadow: -3px 3px 15px #222;
     font-size: 1.1em;
     margin-bottom: 1ex;
-    
+
     @media #{$mobile} {
         height: 43.4em; //43.4
     }
-    
+
     .weather-content {
         color: $white;
         padding-top: 2em;
         font-family: 'Merriweather';
         font-weight: 300;
-        
+
         .dayOfWeek {
             text-align: center;
             font-size: 2.2em;
             font-weight: 300;
         }
-        
+
         .date {
             text-align: center;
             font-size: 1.3em;
         }
-        
+
         .icon-wrap {
             text-align: center;
         }
-        
+
         .day-summary {
             text-align: center;
             font-size: 1.5em;
             font-weight: 300;
-            
+
             @media #{$mobile} {
                 font-size: 1em;
             }
         }
-        
-       
-            
+
+
+
         .weather-attribute {
             margin-top: 2em;
             font-size: 1.5em;
             text-align: center;
-            
+
             @media #{$mobile} {
                 font-size: 1em;
                 text-align: left;
                 margin-top: 2ex;
             }
-            
+
         }
 
         .weather-stat {
             margin-top: .66em;
             font-size: 3em;
             text-align: center;
-            
+
             @media #{$mobile} {
                 font-size: 1em;
                 text-align: right;
                 margin-top: 2ex;
             }
-            
+
         }
 
     }
@@ -237,13 +254,13 @@ h1 {
     margin-top: -1em;
     margin-bottom: .5em;
     text-align: center;
-   
+
     .map-welcome {
         color: $white;
         font-size: 4em;
         font-family: 'Raleway';
         text-shadow: -2px 2px 5px gray;
-        
+
         @media #{$mobile} {
             font-size: 2.5em;
         }
@@ -254,7 +271,7 @@ h1 {
         font-size: 1.1em;
         font-family: 'Merriweather';
         text-shadow: -2px 2px 5px gray;
-        
+
         @media #{$mobile} {
             font-size: 1em;
         }
@@ -262,20 +279,20 @@ h1 {
 }
 
 .report {
-    
-    
+
+
     .label-text {
         font-family: 'Raleway', sans-serif;
         font-size: 2.2em;
         color: $white;
         text-shadow: -1px 1px 10px #333;
-        
+
         @media #{$mobile} {
             font-size: 1.3em;
             margin-top: .5ex;
         }
     }
-    
+
     textarea {
         opacity: .9;
     }
@@ -295,32 +312,32 @@ h1 {
     @media #{$mobile} {
         margin-top: 2em;
     }
-    
+
     .duck-pic-wrap {
         text-align: center;
         @media #{$mobile} {
             margin-bottom: 2em;
-            
+
         }
-        
+
         img {
             height: 30em;
             width: 30em;
-            
+
             @media #{$mobile} {
                 height: 19em;
-                width: 19em;    
+                width: 19em;
             }
         }
-    
+
     }
-    
+
     .duck-info {
         color: $white;
         padding: 1em;
         background-color: rgba(0,0,0,.5);
         border-radius: 1em;
-        
+
         .duck-name {
             margin-top: 0;
             margin-bottom: .5ex;
@@ -328,20 +345,20 @@ h1 {
             font-size: 4em;
             font-family: 'Raleway';
             text-shadow: -1px 1px 15px black;
-            
+
             @media #{$mobile} {
                 font-size: 3em;
                 text-align: center;
-                
+
             }
         }
-        
+
         .duck-scription {
             font-size: 1.1em;
             font-family: 'Merriweather';
             line-height: 3ex;
 //            text-shadow: -2px 2px 5px gray;
-            
+
         }
     }
 }

@@ -2,8 +2,11 @@
 
 angular.module('waterfowlGulpAngular')
 
-  .controller('MainCtrl', function () {
-    console.log('Hello')
+  .controller('MainCtrl', function ($scope, $firebaseObject, $stateParams, Auth) {
+    console.log('Hello');
+
+    $scope.login = Auth.fbLogin();
+
+
+
   });
-
-

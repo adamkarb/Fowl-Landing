@@ -2,7 +2,7 @@
 
 angular.module('waterfowlGulpAngular', ['ngAnimate', 'ui.router', 'angular-skycons', 'leaflet-directive', 'geolocation', 'angular-loading-bar', 'firebase'])
   .config(function ($stateProvider, $urlRouterProvider) {
-    
+
     $stateProvider
       .state('home', {
         url: '/',
@@ -27,13 +27,9 @@ angular.module('waterfowlGulpAngular', ['ngAnimate', 'ui.router', 'angular-skyco
         controller: 'DuckCtrl',
         controllerAs: 'duck'
     });
-      
 
-          
+
+
     $urlRouterProvider.otherwise('/');
   })
 ;
-
-
-
-
