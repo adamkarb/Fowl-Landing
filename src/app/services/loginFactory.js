@@ -6,11 +6,11 @@ angular.module('waterfowlGulpAngular')
   var currentUser = { };
 
   return {
-    onAuth: function(credentials){
-      auth.onAuth(function(data){
-        credentials(updateUser(data));
-      })
-    },
+    // onAuth: function(credentials){
+    //   auth.onAuth(function(data){
+    //     credentials(updateUser(data));
+    //   })
+    // },
 
     fbLogin: function() {
         return auth.authWithOAuthPopup('facebook', function(error, authData){
