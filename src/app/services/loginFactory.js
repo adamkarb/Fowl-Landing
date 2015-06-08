@@ -2,7 +2,7 @@ angular.module('waterfowlGulpAngular')
 
 .factory('Auth', function($firebaseObject, $state) {
 
-  var auth = new Firebase('https://fowl-landing.firebaseio.com/users');
+  var auth = new Firebase('https://fowl-landing.firebaseio.com');
   var currentUser = { };
 
   return {
@@ -21,9 +21,6 @@ angular.module('waterfowlGulpAngular')
           }
         });
     }
-
-
-
 }
 
 });
